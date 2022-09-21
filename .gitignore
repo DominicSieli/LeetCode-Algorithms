@@ -1,12 +1,2 @@
-/*
-!LICENSE
-!.gitignore
-
-/*/
-!/Source
-
-/Source/*
-!/Source/*.h
-!/Source/*.c
-!/Source/*.cs
-!/Source/*.cpp
+*.exe
+*.class

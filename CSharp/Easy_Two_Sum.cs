@@ -16,7 +16,7 @@ public class Solution
 				return new int[] {cache[complement], i};
 			}
 
-			cache.Add(nums[i], i);
+			if(cache.ContainsKey(nums[i]) == false) cache.Add(nums[i], i);
 		}
 
 		return new int[] {0, 0};

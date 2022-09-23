@@ -1,5 +1,3 @@
-using System;
-
 class Calculate
 {
 	public static double Distance(int x, int y)
@@ -14,11 +12,11 @@ class Solution
 	{
 		int minIndex = 0;
 
-		for(int i = 0; i < array.GetLength(0); i++)
+		for(int i = 0; i < array.length; i++)
 		{
 			minIndex = i;
 
-			for(int j = i + 1; j < array.GetLength(0); j++)
+			for(int j = i + 1; j < array.length; j++)
 			{
 				if(Calculate.Distance(array[j][0], array[j][1]) < Calculate.Distance(array[minIndex][0], array[minIndex][1])) minIndex = j;
 			}
@@ -37,7 +35,7 @@ class Solution
 
 	public static int[][] ClosestPoints(int[][] points, int k)
 	{
-		if(points.Length == 0) return points;
+		if(points[0].length == 0) return points;
 		int[][] closest = new int[k][];
 
 		Sort(points);
@@ -53,9 +51,9 @@ class Solution
 	}
 }
 
-class LeetCode
+public class Medium_K_Closest_Points
 {
-	static void Main()
+	public static void main(String[] args)
 	{
 		int k = 4;
 		int size = 10;
@@ -72,7 +70,7 @@ class LeetCode
 
 		for(int i = 0; i < k; i++)
 		{
-			Console.WriteLine("[{0},{1}] : {2}", closest[i][0], closest[i][1], Calculate.Distance(closest[i][0],closest[i][1]));
+			System.out.println("[" + closest[i][0] + "," + closest[i][0] + "] : " + Calculate.Distance(closest[i][0],closest[i][1]));
 		}
 	}
 }
